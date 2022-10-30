@@ -12,7 +12,7 @@ const connectDB = require('./config/database')
 
 //Routes
 const mainRoutes = require('./routes/main')
-const destinationsRoutes = require('./routes/destinations')
+const homeRoutes = require('./routes/home')
 
 //Set up config files
 require('dotenv').config({path: './config/.env'})
@@ -66,7 +66,7 @@ app.use(flash())
 
 //Routes
 app.use('/',mainRoutes)
-app.use('/destinations',destinationsRoutes)
+app.use('/home',homeRoutes)
 
 
 app.listen(process.env.PORT, ()=>{

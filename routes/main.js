@@ -7,7 +7,7 @@ const mainController = require('../controllers/main')
 const authController = require('../controllers/auth')
 
 //Set up routers
-router.get('/', mainController.getIndex) //Basic Destination 
+router.get('/', mainController.getIndex) //Login 
 router.get('/login', authController.getLogin)
 router.post('/login', authController.postLogin)
 router.get('/logout', authController.logout)

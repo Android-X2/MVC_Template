@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const { ensureAuth } = require('../middleware/auth')
 
-const destinationsController = require('../controllers/destinations')
+const homeController = require('../controllers/home')
 
 
-router.get('/', ensureAuth, destinationsController.getDestinations)
+router.get('/', ensureAuth, homeController.getHome)
 
 module.exports = router 

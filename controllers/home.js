@@ -1,6 +1,6 @@
 
 module.exports = {
-    getDestinations: async (req,res)=>{
+    getHome: async (req,res)=>{
         try{
             res.render('home.ejs' )
         }catch(err){

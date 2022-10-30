@@ -4,7 +4,7 @@ const User = require('../models/User')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
-      return res.redirect('/destinations')
+      return res.redirect('/home') //Goes to home Page
     }
     res.render('login', {
       title: 'Login'
@@ -31,7 +31,7 @@ const User = require('../models/User')
       req.logIn(user, (err) => {
         if (err) { return next(err) }
         req.flash('success', { msg: 'Success! You are logged in.' })
-        res.redirect(req.session.returnTo || '/destinations')
+        res.redirect(req.session.returnTo || '/home') //Goes to home page
       })
     })(req, res, next)
   }
@@ -49,7 +49,7 @@ const User = require('../models/User')
 
   exports.getSignup = (req, res) => {
     if (req.user) {
-      return res.redirect('/destinations')
+      return res.redirect('/home')
     }
     res.render('signup', {
       title: 'Create Account'
@@ -89,7 +89,7 @@ const User = require('../models/User')
           if (err) {
             return next(err)
           }
-          res.redirect('/destinations')
+          res.redirect('/home')
         })
       })
     })
