@@ -1,5 +1,6 @@
 A simple template that uses a MVC strcture with the basic
 dependencies/packages:
+
 -bcrypt
 
 -connect-mongo
